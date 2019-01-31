@@ -1,55 +1,53 @@
-const pkg = require('./package')
-
+const pkg = require("./package");
 
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
 
-  /*
-  ** Headers of the page
-  */
-  head: {
-    title: pkg.name,
-    meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: pkg.description}
-    ],
-    link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
-    ]
+  generate: {
+    routes: ["/posts/balut", "/posts/whereIsIt", "/posts/how"]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
-  loading: {color: '#fff'},
+   ** Headers of the page
+   */
+  head: {
+    title: pkg.name,
+    meta: [
+      {charset: "utf-8"},
+      {name: "viewport", content: "width=device-width, initial-scale=1"},
+      {hid: "description", name: "description", content: pkg.description}
+    ],
+    link: [{rel: "icon", type: "image/x-icon", href: "/favicon.ico"}]
+  },
 
   /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/style.css'
-  ],
+   ** Customize the progress-bar color
+   */
+  loading: {color: "#fff"},
 
   /*
-  ** Plugins to load before mounting the App
-  */
+   ** Global CSS
+   */
+  css: ["~/assets/style.css"],
+
+  /*
+   ** Plugins to load before mounting the App
+   */
   plugins: [],
 
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
-
     }
   }
-}
+};
